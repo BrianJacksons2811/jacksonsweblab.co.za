@@ -16,17 +16,23 @@
 
  /* top-menu*/
   .nav{
+    position: fixed;
+    top: 0;
+    left: 0;
     background-color: #7a71;
     border-bottom: 1px solid #00d4ff;
-    padding: 8px 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
+    width: 100%;
     justify-content: space-between;
+    z-index: 1000;
   }
 
-  .nav .logo h1{
+  .nav .logo img{
     margin-left: 96px;
-    border: 2px solid #00d4ff
+    width: 25%;
   }
 
   .nav-menu a{
@@ -551,6 +557,7 @@
 
 /*about-page styling*/
 .about-hero {
+  margin-top: 8%;
   text-align: center;
   padding:0 20px 50px 20px;
   background: url("./Images/hero-background.jpg") center center / cover;
@@ -677,37 +684,39 @@ footer {
     
    /* Footer */
 
-  .footer {
-    padding: 60px 20px;
-    background: #ff6600;
-    color: #00d4ff;
-   }
+  /* Footer */
 
-  .footer .container {
-    max-width: 1200px;
-    margin: 0 auto;
-   }
+.footer {
+  padding: 60px 20px;
+  background: #ff6600;
+  color: #00d4ff;
+}
 
-  .footer-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
-    margin-bottom: 40px;
-   }
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-  .footer-logo {
-    width: 150px;
-    margin-bottom: 20px;
-   }
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
 
-  .footer-links ul {
-    list-style: none;
-    padding: 0;
-   }
+.footer-logo {
+  width: 50%;
+  margin-bottom: 20px;
+}
 
-  .footer-links ul li {
-    margin: 20px;
-   }
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 20px;
+}
 
 .footer-links ul li a {
   color: #ffffff;
@@ -754,6 +763,7 @@ footer {
   color: #ffffff;
 }
 
+
 /* footer-bottom*/
 
 .footer-bottom-2 {
@@ -772,9 +782,6 @@ footer {
   display: none;
   cursor: pointer;
 }
-
-
-
 
 
 /* /* 

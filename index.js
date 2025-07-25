@@ -14,17 +14,27 @@ function toggleMenu() {
     navMenu.classList.toggle('show');
   }
 
-  const hamburger = document.getElementById("hamburger");
-const mobileMenu = document.getElementById("mobileMenu");
-const closeMenuBtn = document.getElementById("closeMenu");
+  document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.nav-menu');
+  
+  hamburger.addEventListener('click', function() {
+    this.classList.toggle('active');
+    navMenu.classList.toggle('active');
+    
 
-hamburger.addEventListener("click", () => {
-  mobileMenu.classList.add("open");
-});
-
-closeMenuBtn.addEventListener("click", (e) => {
-  e.preventDefault(); 
-  mobileMenu.classList.remove("open");
+    document.body.classList.toggle('no-scroll');
+  });
+  
+  
+  const navLinks = document.querySelectorAll('.nav-menu a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+      document.body.classList.remove('no-scroll');
+    });
+  });
 });
 
 
