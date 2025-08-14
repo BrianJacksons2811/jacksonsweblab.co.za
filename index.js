@@ -9,35 +9,6 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 });
 
-function toggleMenu() {
-    const navMenu = document.querySelector('.nav-menu');
-    navMenu.classList.toggle('show');
-  }
-
-  document.addEventListener('DOMContentLoaded', function() {
-  const hamburger = document.querySelector('.hamburger');
-  const navMenu = document.querySelector('.nav-menu');
-  
-  hamburger.addEventListener('click', function() {
-    this.classList.toggle('active');
-    navMenu.classList.toggle('active');
-    
-
-    document.body.classList.toggle('no-scroll');
-  });
-  
-  
-  const navLinks = document.querySelectorAll('.nav-menu a');
-  navLinks.forEach(link => {
-    link.addEventListener('click', function() {
-      hamburger.classList.remove('active');
-      navMenu.classList.remove('active');
-      document.body.classList.remove('no-scroll');
-    });
-  });
-});
-
-
 // Back to Top button functionality
 const backToTop = document.createElement('button');
 backToTop.textContent = '↑ Top';
@@ -104,24 +75,3 @@ window.addEventListener('scroll', handleScroll);
   }
 
   form.addEventListener("submit", handleSubmit);
-//quote page//
-
- document.addEventListener("DOMContentLoaded", function () {
-      emailjs.init("YOUR_EMAILJS_USER_ID");
-
-      document.getElementById("quote-form").addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        const form = this;
-        const status = document.getElementById("form-status");
-
-        emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form)
-          .then(() => {
-            status.textContent = "✅ Your quote request has been sent successfully!";
-            form.reset();
-          }, (error) => {
-            status.textContent = "❌ Failed to send. Please try again.";
-            console.error(error);
-          });
-      });
-    });
