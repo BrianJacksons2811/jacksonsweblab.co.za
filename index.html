@@ -11,31 +11,28 @@
   <body>
     <div class="nav">
       <div class="logo">
-       <img src="./Images/Logo/Logotrans.png" alt="Jacksonsweblab-logo">
+       <img src="./Images/Logo/Logotrans.png" alt="Jacksonsweblab-logo" href="#">
       </div>
-      <div class="off-screen-menu">
-        <ul>
-          <li>Home</li>
-          <li>About us</li>
-          <li>Service</li>
-          <li>contact</li>
-        </ul>
-      </div>
-      <nav>
-      <div class="ham-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      </nav>
       <div class="nav-menu">
            <list>
+                <a href="index.html" class="hideOnMobile">Home</a>
+                <a href="About.html"class="hideOnMobile">About Us </a>
+                <a href="Services.html"class="hideOnMobile">Service</a> 
+                <a href="Contact.html"class="hideOnMobile">Contact</a>
+           </list>
+           <list class="sidebar">
+                <a href="#" onclick=hideSidebar()>
+                  <img src="./Images/menu/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="close-menu-icon">
+                </a>
                 <a href="index.html">Home</a>
                 <a href="About.html">About Us </a>
                 <a href="Services.html">Service</a> 
                 <a href="Contact.html">Contact</a>
            </list>
-      </div>
+           <a href="#" class="menu-button" onclick=showSidebar() >
+                <img src="./Images/menu/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg">
+            </a>
+        </div>
        </div>
   <section class="hero">
     

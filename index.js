@@ -9,6 +9,18 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 });
 
+//ham menu
+
+function showSidebar(){
+  const sidebar = document.querySelector('.sidebar')
+  sidebar.style.display= 'flex'
+}
+
+function hideSidebar(){
+   const sidebar = document.querySelector('.sidebar')
+   sidebar.style.display= 'none'
+}
+
 // Back to Top button functionality
 const backToTop = document.createElement('button');
 backToTop.textContent = '↑ Top';
