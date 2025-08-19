@@ -44,47 +44,118 @@
     
   }
 
-  /* side bar style*/
+/* Main menu styling - visible on desktop */
+  .main-menu {
+    display: flex;
+    gap: 20px;
+  }
 
-  .sidebar{
+  .main-menu a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    transition: color 0.3s;
+  }
+
+  .main-menu a:hover {
+    color: #3498db;
+  }
+
+  /* Sidebar styling - hidden by default */
+  .sidebar {
+    display: none;
     position: fixed;
-    top:0;
+    top: 0;
     right: 0;
     height: 100vh;
     width: 250px;
-    z-index: 999;
-    background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    display: none;
+    background-color: #2c3e50;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
   }
 
-  .sidebar a{
-    width: 100%;
+  .sidebar a {
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 15px 10px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
   }
 
-  .menu-button{
+  .sidebar a:hover {
+    background-color: #34495e;
+  }
+
+  .sidebar a:first-child {
+    border-bottom: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    align-self: flex-end;
+  }
+
+  .sidebar a:first-child:hover {
+    background-color: transparent;
+  }
+
+  .sidebar a img {
+    width: 24px;
+    height: 24px;
+    filter: invert(100%);
+  }
+
+  
+  .menu-button {
     display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+    background-color: #2c3e50;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
   }
 
-  @media(max-width:800px){
-    .hideOnMobile{
+  .menu-button:hover {
+    transform: scale(1.1);
+  }
+
+  .menu-button img {
+    width: 24px;
+    height: 24px;
+    filter: invert(100%);
+  }
+
+  /* Show sidebar when active */
+  .sidebar.active {
+    display: flex;
+    transform: translateX(0);
+  }
+
+  /* Responsive behavior */
+  @media (max-width: 1023px) {
+    .main-menu {
       display: none;
     }
-    .menu-button{
+    
+    .menu-button {
       display: block;
     }
   }
 
-  @media(max-width:400px){
-    .sidebar{
-      width: 100%;
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 200px;
     }
   }
-
 
   /*hero section*/
 
