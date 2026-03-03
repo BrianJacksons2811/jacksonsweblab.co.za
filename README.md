@@ -28,8 +28,7 @@ Google Fonts – Inter
 Responsive Design using media queries
 Formspree
 🚀 Live Demo
-🔗 https://brianjacksons2811.github.io/jacksonsweblab/
-
+🔗https://brianjacksons2811.github.io/jacksonsweblab.co.za/
 📬 Contact
 💌 Email: jwadmin@jacksonsweblab.co.za
 📍 Location: Centurion, Gauteng
